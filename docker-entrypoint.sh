@@ -1,4 +1,4 @@
 #!/bin/sh
 
-socat pty,wait-slave,link=/dev/ttyACM0,perm-late=0770,group-late=octoprint tcp:${PRINTER_HOST} &
-su - octoprint -c "PATH='/opt/venv/bin:/opt/ffmpeg:/opt/cura:$PATH' exec ${1}"
+socat pty,link=/socat/ttyACM0 tcp:${PRINTER_HOST} &
+exec ${1}
