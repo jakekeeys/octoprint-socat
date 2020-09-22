@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/jakekeeys/octoprint-socat/status "Docker Repository on Quay")](https://quay.io/repository/jakekeeys/octoprint-socat)
+
 # Raspberry Pi Setup
 
 ### Serial GPIO
