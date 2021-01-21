@@ -1,7 +1,7 @@
 # Intermediate build container.
 FROM python:3.7-alpine as build
 
-ARG VERSION=1.5.2
+ARG VERSION=1.5.3
 
 RUN apk --no-cache add build-base
 RUN apk --no-cache add linux-headers
