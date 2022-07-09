@@ -1,7 +1,7 @@
 # Intermediate build container.
-FROM python:3.7-alpine as build
+FROM python:3.10-alpine as build
 
-ARG VERSION=1.7.0rc2
+ARG VERSION=1.8.1
 
 RUN apk --no-cache add build-base
 RUN apk --no-cache add linux-headers
@@ -11,7 +11,7 @@ WORKDIR /OctoPrint-${VERSION}
 RUN pip install -r requirements.txt
 RUN python setup.py install
 
-FROM python:3.7-alpine
+FROM python:3.10-alpine
 
 COPY --from=build /usr/local/bin /usr/local/bin
 COPY --from=build /usr/local/lib /usr/local/lib
